@@ -13,7 +13,7 @@ public class UppgiftEtt {
                 System.out.println("FizzBuzz");
             } else if (i % 3 == remainder) {
                 System.out.println("Fizz");
-            } else if (i % 3 == remainder) {
+            } else if (i % 5 == remainder) {
                 System.out.println("Buzz");
             } else {
                 System.out.println(i);
