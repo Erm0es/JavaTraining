@@ -16,13 +16,10 @@ class StreamTraining {
 
         List<Person> people = new ArrayList<>();
 
-        people.add(new Person("Emelie Wiberg",120));
+        people.add(new Person("Emelie Wiberg",150));
         people.add(new Person("Kalle Karlsson", 100));
-        people.add(new Person("Einar Löv", 150));
-        people.add(new Person("Jacob Guld", 50));
-        
-
-        //List<Person> hundredClub = new ArrayList<>();
+        people.add(new Person("Einar Löv", 90));
+        people.add(new Person("Jacob Guld", 5));
 
         List<Person> hundredClub = people.stream()
             .filter(person -> person.billions >= 100)
