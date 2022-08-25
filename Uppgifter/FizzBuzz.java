@@ -1,6 +1,6 @@
 package Uppgifter;
 
-public class UppgiftEtt {
+public class FizzBuzz {
     public static void main(String[] args) {
 
         int i = 1;
