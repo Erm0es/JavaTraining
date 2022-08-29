@@ -27,7 +27,6 @@ class StreamTraining {
 
             hundredClub.forEach(person -> System.out.println(person.name));
     }
-    
     static class Person {
         String name;
         int billions;
