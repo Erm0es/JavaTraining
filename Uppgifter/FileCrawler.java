@@ -11,21 +11,21 @@ public class FileCrawler {
 
         Scanner scanner = new Scanner(System.in);
         String search = scanner.nextLine();
-        System.out.println(search);
-       
-            BufferedReader br = new BufferedReader(
-                new FileReader("C:\\Users\\Emelie\\Desktop\\Skolan\\FileCrawler\\Stupid.txt"));
-                String s;
-                while((s = br.readLine()) != null){
-                    System.out.println(s);
-                }
-                br.close();
-        }catch(Exception ex){
-            return;
-        }
 
-        if(SÖKORD == br){
-            System.out.Println(s)
+        
+        File file = new File("S:\\VisualStudio\\JavaTraining\\Uppgifter\\DocumentFc\\Stupid.txt");
+        Scanner fileScanner = new Scanner(file);
+
+        while(fileScanner.hasNext()){
+            if(fileScanner.nextLine().contains(search)){
+                System.out.println(file);
+            } else{
+                return;
+            }
+        }
+       
+        }catch(FileNotFoundException e){
+            System.out.println("File does not exist.");
         }
     }  
 
