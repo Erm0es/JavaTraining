@@ -11,11 +11,9 @@ public class Main {
         Pokemon p2 = new Pokemon();
         p2.name = "Eevee";
         p2.level = 20;
-
         p2.attack();
 
         Pokemon p3 = new Pokemon("Bulbasaur",25);
-
         System.out.println(p3.level);
         p3.attack();
 
