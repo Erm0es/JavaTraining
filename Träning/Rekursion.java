@@ -1,6 +1,6 @@
 package Träning;
 
-public class Lektion3 {
+public class Rekursion {
     public static void main(String[] args){
         System.out.println("summan är: " + sum(6));
     }
