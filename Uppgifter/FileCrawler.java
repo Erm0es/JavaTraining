@@ -1,32 +1,46 @@
 package Uppgifter;
 
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.*;
+import java.io.FileReader;
 
 public class FileCrawler {
     public static void main (String [] args){
-        try{
-        System.out.println("Hi! Enter search word:");
 
-        Scanner scanner = new Scanner(System.in);
+    readFile("S:\\VisualStudio\\JavaTraining\\Uppgifter\\DocumentFc\\stupid.txt");
+
+    }  
+
+    public static void readFile(String filePath){
+        Scanner scanner = null;
+
+        System.out.println("Hi! Enter search word:");
+        scanner = new Scanner(System.in);
         String search = scanner.nextLine();
 
-        
-        File file = new File("S:\\VisualStudio\\JavaTraining\\Uppgifter\\DocumentFc\\Stupid.txt");
-        Scanner fileScanner = new Scanner(file);
+        try{
+            BufferedReader br = new BufferedReader(
+                new FileReader(filePath));
+                String s;
 
-        while(fileScanner.hasNext()){
-            if(fileScanner.nextLine().contains(search)){
-                System.out.println(file);
-            } else{
-                return;
+                while((s = br.readLine()) != null){
+                    if(search.contains(s)){
+                        System.out.println(filePath);
+                    }else{
+                        System.out.println("STUPIDSTUPID");
+                    }
+                    
+                } 
+                br.close();
+                  
+            }catch(Exception e){
+                System.out.println("File does not exist.");
+            }finally{
+                if(scanner != null){
+                    scanner.close();
+                }
             }
-        }
-       
-        }catch(FileNotFoundException e){
-            System.out.println("File does not exist.");
-        }
-    }  
+
+    }
 
 }
