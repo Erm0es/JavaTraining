@@ -25,6 +25,7 @@ public class NestedLoop {
             System.out.print(symbol);  
             }
         }
+        scanner.close();
 
     }
 
